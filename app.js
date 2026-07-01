@@ -1,11 +1,15 @@
 import express from 'express';
 import urlRoute from './routes/urlroute.js';
 import dotenv from 'dotenv';
+import { con } from './connect.js';
 
 dotenv.config();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+con.connect().then(()=> console.log("Connected"));
+
 
 app.use(express.json());
 

@@ -1,7 +1,7 @@
 import express from 'express';
-import { geturl } from '../controllers/urlcontroller.js';
+import { geturl, shortUrl, updateUrl, deleteUrl, getStats } from '../controller/controlUrl.js';
 
-router = express.Router();
+const router = express.Router();
 
 router.post('/shorten', geturl);
 router.get('/shorten/:shortCode', shortUrl);

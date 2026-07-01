@@ -1,0 +1,9 @@
+@urlbase = http://localhost:3000
+
+### SEND URL
+POST {{urlbase}}/shorten HTTP/1.1
+Content-Type: application/json
+
+{
+ "url":"google.com"
+}
